@@ -1,13 +1,51 @@
 {% extends 'blog/base.html' %}
-                {% block content %}
-                {% for post in posts %}
-                    <article class="post">
-                        <time class="date">
-                            {{ post.published_date }}
-                        </time>
-                        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                        <p>{{ post.text|linebreaksbr }}</p>
-                    </article>
-                {% endfor %}
-                {% endblock %}
-          
+
+{% block content %}
+
+    <div class="intro">
+        <span class="intro-label">MEDICAL AI BLOG</span>
+
+        <h2>Artificial Intelligence in Medicine</h2>
+
+        <p>
+            Discover how artificial intelligence, machine learning, and medical
+            imaging are transforming healthcare and supporting modern disease detection.
+        </p>
+    </div>
+
+    <div class="posts-container">
+
+        {% for post in posts %}
+
+            <article class="post-card">
+
+                <div class="post-card-content">
+
+                    <time class="date">
+                        {{ post.published_date }}
+                    </time>
+
+                    <h2>
+                        <a href="{% url 'post_detail' pk=post.pk %}">
+                            {{ post.title }}
+                        </a>
+                    </h2>
+
+                    <p class="post-excerpt">
+                        {{ post.text|truncatewords:35 }}
+                    </p>
+
+                    <a href="{% url 'post_detail' pk=post.pk %}" class="read-more">
+                        Read More <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+        {% endfor %}
+
+    </div>
+
+
+{% endblock %}

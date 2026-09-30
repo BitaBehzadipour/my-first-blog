@@ -1,0 +1,224 @@
+h1 a, h2 a {
+    color: #C25100;
+    font-family: 'Lobster';
+}
+body {
+    
+}
+.page-header {
+    background-color: #C25100;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 25px 20px 30px 40px;
+}
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lobster', cursive;
+}
+.date {
+    color: #828282;
+}
+.save {
+    float: right;
+}
+
+.post-form textarea,
+.post-form input {
+    width: 100%;
+}
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+.post {
+    margin-bottom: 70px;
+}
+.post h2 a,
+.post h2 a:visited {
+    color: #000000;
+}
+.post > .date,
+.post > .actions {
+    float: right;
+}
+.btn-secondary,
+.btn-secondary:visited {
+    color: #C25100;
+    background: none;
+    border-color: #C25100;
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    color: #FFFFFF;
+    background-color: #C25100;
+}
+/* =========================
+   INTRO SECTION
+========================= */
+
+.intro {
+    position: relative;
+    background: linear-gradient(135deg, #fff8f2, #ffffff);
+    border-radius: 20px;
+    padding: 42px 45px;
+    margin: 10px 0 55px;
+    border: 1px solid #f1dfd1;
+    box-shadow: 0 10px 30px rgba(194, 81, 0, 0.08);
+    overflow: hidden;
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: #C25100;
+    opacity: 0.05;
+    border-radius: 50%;
+    top: -90px;
+    right: -40px;
+}
+
+.intro::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #C25100;
+    opacity: 0.04;
+    border-radius: 50%;
+    bottom: -50px;
+    left: -25px;
+}
+
+.intro-label {
+    position: relative;
+    color: #C25100;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.intro h2 {
+    position: relative;
+    color: #C25100;
+    font-size: 34px;
+    margin: 10px 0 15px;
+}
+
+.intro p {
+    position: relative;
+    max-width: 850px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+
+/* =========================
+   POSTS
+========================= */
+
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.post-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    padding: 28px 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(194, 81, 0, 0.12);
+    border-color: #f0d5c2;
+}
+
+.post-card .date {
+    display: block;
+    color: #999999;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.post-card h2 {
+    margin: 0 0 14px;
+}
+
+.post-card h2 a {
+    color: #222222;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.post-card h2 a:hover {
+    color: #C25100;
+}
+
+.post-excerpt {
+    color: #666666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   READ MORE BUTTON
+========================= */
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #C25100;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.read-more span {
+    transition: transform 0.2s ease;
+}
+
+.read-more:hover {
+    color: #9d4200;
+}
+
+.read-more:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   PAGE SPACING
+========================= */
+
+.content {
+    padding-bottom: 60px;
+}
+
+
+
+
