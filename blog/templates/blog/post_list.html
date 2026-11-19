@@ -1,3 +1,4 @@
+
 {% extends 'blog/base.html' %}
 
 {% block content %}
@@ -13,9 +14,13 @@
         </p>
     </div>
 
-    <div class="posts-container">
+    <div class="row">
 
-        {% for post in posts %}
+        <div class="col-lg-10 mx-auto">
+    
+            <div class="posts-container">
+    
+                {% for post in posts %}
 
             <article class="post-card">
 
@@ -43,9 +48,87 @@
 
             </article>
 
-        {% endfor %}
+            {% endfor %}
+
+        </div>
 
     </div>
 
+    
 
+</div>
+
+<section id="topics" class="healthcare-section">
+
+    <div class="section-heading">
+        <h2>AI in Healthcare</h2>
+        <p>
+            Exploring the applications of artificial intelligence
+            in modern medicine and healthcare.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="healthcare-card">
+                <div class="healthcare-icon">🧠</div>
+                <h3>Artificial Intelligence</h3>
+                <p>
+                    Exploring the role of AI in medical diagnosis,
+                    prediction, and healthcare decision-making.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="healthcare-card">
+                <div class="healthcare-icon">🔬</div>
+                <h3>Medical Imaging</h3>
+                <p>
+                    Understanding how AI analyzes medical images
+                    such as MRI, CT scans, and mammography.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="healthcare-card">
+                <div class="healthcare-icon">🧬</div>
+                <h3>Cancer Detection</h3>
+                <p>
+                    Exploring machine learning applications
+                    for early detection and cancer research.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section id="about" class="about-section">
+
+    <h2>About AI in Medicine</h2>
+
+    <p>
+        AI in Medicine is a blog about artificial intelligence,
+        machine learning, medical imaging, and their applications
+        in modern healthcare.
+    </p>
+
+</section>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <h3>AI in Medicine</h3>
+
+        <p>
+            Exploring the role of artificial intelligence
+            in modern medicine and healthcare.
+        </p>
+
+        <span>© 2026 AI in Medicine — All Rights Reserved</span>
+    </div>
+</footer>
 {% endblock %}
+

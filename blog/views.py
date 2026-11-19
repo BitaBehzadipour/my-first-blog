@@ -6,10 +6,18 @@ from .forms import PostForm
 def hello(request):
     return render(request,'blog/hello.html',{})
 def post_list(request):
-    posts = Post.objects.filter(
-        #published_date__lte=timezone.now()
-        ).order_by('published_date')
-    return render(request,'blog/post_list.html',{'posts':posts})
+
+    category = request.GET.get('category')
+
+    if category:
+        posts = Post.objects.filter(category=category).order_by('published_date')
+    else:
+        posts = Post.objects.all().order_by('published_date')
+
+    return render(request, 'blog/post_list.html', {
+        'posts': posts,
+        'selected_category': category
+    })
 def post_detail(request,pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request,'blog/post_detail.html',{'post':post})
